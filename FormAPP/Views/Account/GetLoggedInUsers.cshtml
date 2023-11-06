@@ -1,0 +1,23 @@
+﻿@using LoginFormAttempts.Models;
+@using Microsoft.AspNetCore.Identity
+@using FormAPP.Models
+
+@model List<ApplicationUser>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Index</th>
+            <th>Username</th>
+        </tr>
+    </thead>
+    <tbody>
+        @for (var i = 0; i < Model.Count; i++)
+        {
+            <tr>
+                <td>@(i + 1)</td>
+                <td>@Model[i].UserName</td>
+            </tr>
+        }
+    </tbody>
+</table>
